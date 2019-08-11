@@ -5,7 +5,7 @@
 (restas:define-module #:hello-world
     (:use :cl :restas)) ;; RESTAS application live in modules, which are similar to ordinary common lisp packages.
 
-(in-package #:hello-world) ;;Symbols starting with #: are uninterned, meaning they have no package, we just want to use its namestring, which is "HELLO-WORLD". 
+(in-package #:hello-world) ;; Symbols starting with #: are uninterned, meaning they have no package, we just want to use its namestring, which is "HELLO-WORLD". 
 
 (define-route hello-world ("")
     "Hello World") ;; RESTAS apps are based on uri handlers called routes. Routes in their simplest form shown here, have: *A name (hello-world in this case)* An uri template. in this case the empty string "", meaning it will match the / uri * A body generating a response, in this case the string "hello world" returned to the client.
